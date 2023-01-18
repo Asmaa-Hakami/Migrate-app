@@ -58,6 +58,6 @@ def send_email(email, subject, body):
         to_emails=email,
         subject=subject,
         plain_text_content=body)
-    SENDGRID_API_KEY = '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"'
+    SENDGRID_API_KEY = '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'
     sg = SendGridAPIClient(SENDGRID_API_KEY)
     sg.send(message)

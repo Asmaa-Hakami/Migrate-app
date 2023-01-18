@@ -61,13 +61,23 @@ You will need to install the following locally:
 ## Monthly Cost Analysis
 Complete a month cost analysis of each Azure resource to give an estimate total cost using the table below:
 
-| Azure Resource | Service Tier | Monthly Cost |
-| ------------ | ------------ | ------------ |
-| *Azure Postgres Database* |     |              |
-| *Azure Service Bus*   |         |              |
-| ...                   |         |              |
+|     Azure Resource        |  Service Tier        |  Monthly Cost   |
+|     ------------          |  ------------        | ------------    |
+| *Azure Postgres Database* | Basic,1vCore(s),5GB  |  	$1.45       |
+| *Azure Service Bus*       | Basic                |    	< $0.05     |
+| *Azure Storage Account*	 | bandwidth & tables & |                 |
+|                           | tiered block blob	   |     < $0.01     |
+| *Azure App Service*	    | Free Tier	         |     $0          |
+| *Azure App Service Plan*	 | Basic Tier	         |     < $0.0.1    |
 
 ## Architecture Explanation
-This is a placeholder section where you can provide an explanation and reasoning for your architecture selection for both the Azure Web App and Azure Function.
+The archicture selected for this app, is basead on the following key points:
+
+Peformance: Seperating background tasks from The main processes allows for more peformant services that can be scalled independently of each other
+
+Scaleability: Hosting the Web App in Azure App Service provide the opportunity to scale vertically and horizontally on demand.
+
+Cost: Better pay out of the app, because instead of paying for the total app we'll pay for each component
+
 # Migrate-app
 # Migrate-app
